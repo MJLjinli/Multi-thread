@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NSOperationViewController">
+            <connections>
+                <outlet property="mainImageView" destination="brA-Fj-2ev" id="8Ck-ou-nPA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIB-9B-mh4">
+                    <rect key="frame" x="20" y="80" width="335" height="40"/>
+                    <color key="backgroundColor" red="0.74787110040000004" green="0.95686274510000002" blue="0.52376164800000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="8zD-aN-A2U"/>
+                    </constraints>
+                    <state key="normal" title="NSInvocationOperation">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="childInvoOperationBtnClick:" destination="-1" eventType="touchUpInside" id="kx1-Gh-SXM"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pag-9l-p5a">
+                    <rect key="frame" x="20" y="150" width="335" height="40"/>
+                    <color key="backgroundColor" red="0.74787110040000004" green="0.95686274510000002" blue="0.52376164800000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="NSBlockOperation">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="childBlockOperationBtnClick:" destination="-1" eventType="touchUpInside" id="Tvu-3h-7Fa"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="brA-Fj-2ev">
+                    <rect key="frame" x="20" y="290" width="335" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="lVV-2w-TOI"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qnm-k3-LnY">
+                    <rect key="frame" x="20" y="220" width="335" height="40"/>
+                    <color key="backgroundColor" red="0.74787110040000004" green="0.95686274510000002" blue="0.52376164800000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="NSOperationQueue">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="otherQueueBtnClick:" destination="-1" eventType="touchUpInside" id="at2-JU-TpO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="nIB-9B-mh4" secondAttribute="trailing" constant="20" id="56g-YG-0Tl"/>
+                <constraint firstItem="pag-9l-p5a" firstAttribute="height" secondItem="nIB-9B-mh4" secondAttribute="height" id="6mh-RC-cF0"/>
+                <constraint firstItem="nIB-9B-mh4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="6oA-hz-Qgx"/>
+                <constraint firstItem="pag-9l-p5a" firstAttribute="top" secondItem="nIB-9B-mh4" secondAttribute="bottom" constant="30" id="Asl-Ur-KaA"/>
+                <constraint firstItem="Qnm-k3-LnY" firstAttribute="trailing" secondItem="pag-9l-p5a" secondAttribute="trailing" id="Fh5-Ba-NGe"/>
+                <constraint firstItem="nIB-9B-mh4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="Fhh-fh-JtP"/>
+                <constraint firstItem="brA-Fj-2ev" firstAttribute="top" secondItem="pag-9l-p5a" secondAttribute="bottom" constant="100" id="NAR-Oh-HN4"/>
+                <constraint firstItem="brA-Fj-2ev" firstAttribute="trailing" secondItem="pag-9l-p5a" secondAttribute="trailing" id="ODs-we-vjz"/>
+                <constraint firstItem="Qnm-k3-LnY" firstAttribute="height" secondItem="pag-9l-p5a" secondAttribute="height" id="Rou-Pn-CfA"/>
+                <constraint firstItem="Qnm-k3-LnY" firstAttribute="leading" secondItem="pag-9l-p5a" secondAttribute="leading" id="hAK-LS-eVu"/>
+                <constraint firstItem="brA-Fj-2ev" firstAttribute="leading" secondItem="pag-9l-p5a" secondAttribute="leading" id="huj-zd-9OS"/>
+                <constraint firstItem="pag-9l-p5a" firstAttribute="trailing" secondItem="nIB-9B-mh4" secondAttribute="trailing" id="qLf-wa-6cU"/>
+                <constraint firstItem="Qnm-k3-LnY" firstAttribute="top" secondItem="pag-9l-p5a" secondAttribute="bottom" constant="30" id="qOz-7Q-6qE"/>
+                <constraint firstItem="pag-9l-p5a" firstAttribute="leading" secondItem="nIB-9B-mh4" secondAttribute="leading" id="xa1-k6-wS3"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+</document>
